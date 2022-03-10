@@ -2,6 +2,7 @@ package org.example.utils;
 
 import java.math.BigInteger;
 
+// https://www.mathcelebrity.com/linear-congruential-generator-calculator.php
 public class LinearCongruentialGenerator {
 
     private long x0;
