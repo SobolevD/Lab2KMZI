@@ -12,7 +12,7 @@ public class LinearCongruentialGenerator {
 
     public LinearCongruentialGenerator(long x0, long a, long c, long n) {
 
-        if (a == 0){
+/*        if (a == 0){
             throw new RuntimeException("Parameter a could not be equal zero");
         }
 
@@ -22,14 +22,14 @@ public class LinearCongruentialGenerator {
 
         if (gcd(c, n) != 1) {
             throw new RuntimeException("GCD of parameters c and N must be equals 1");
-        }
+        }*/
 
         this.c = c;
         this.N = n;
         this.x0 = x0;
         this.a = a;
 
-        validateA();
+        //validateA();
     }
 
     public long next() {

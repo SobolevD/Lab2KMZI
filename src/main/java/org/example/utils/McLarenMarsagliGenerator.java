@@ -22,6 +22,17 @@ public class McLarenMarsagliGenerator {
         dropSettings();
     }
 
+    public McLarenMarsagliGenerator(long n, long k, LinearCongruentialGenerator generatorX, LinearCongruentialGenerator generatorY) {
+        this.n = n;
+        this.k = k;
+        this.generatorX = generatorX;
+        this.generatorY = generatorY;
+
+        for (long i = 0; i < k; ++i) {
+            T.add(generatorX.next());
+        }
+    }
+
     public void dropSettings() {
         generatorX = new LinearCongruentialGenerator(7891L, 3751L, 367, n);
         generatorY = new LinearCongruentialGenerator(7931L, 1441L, 148, k);
