@@ -1,7 +1,6 @@
 package org.example.utils;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class McLarenMarsagliGenerator {
 
@@ -40,11 +39,10 @@ public class McLarenMarsagliGenerator {
         for (long i = 0; i < k; ++i) {
             T.add(generatorX.next());
         }
-
     }
 
     public int nextInt() {
-        long s = generatorY.next();
+        long s = generatorY.next();       // Индекс для таблицы T для выбора следующего значения из генератора ММ
         int z = (int)(long)T.get((int)s);
         T.set((int)s, generatorX.next());
         return z;
