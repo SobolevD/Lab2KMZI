@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.generators;
 
 import java.math.BigInteger;
 
